@@ -67,7 +67,7 @@ export default function Navbar() {
         }`}
     >
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-12 sm:h-16">
+        <div className="flex items-center justify-between h-20 sm:h-20">
           <a
             href="#home"
             onClick={(e) => handleNavClick(e, '/')}
@@ -76,7 +76,7 @@ export default function Navbar() {
             <img
               src={logoImg}
               alt="The Tiny Theatre"
-              className="h-12 sm:h-16 w-auto object-contain"
+              className="h-19 w-auto object-contain"
             />
           </a>
 
