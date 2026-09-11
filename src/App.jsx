@@ -74,7 +74,7 @@ function AppContent() {
 
   return (
     <div className="w-full max-w-full bg-theatre-dark text-white font-sans overflow-x-hidden min-h-screen relative selection:bg-theatre-gold selection:text-theatre-grey-deep flex flex-col">
-      
+
       {/* Curtain Preloader */}
       <AnimatePresence>
         {loading && (
@@ -112,10 +112,10 @@ function AppContent() {
               transition={{ duration: 1.2, times: [0, 0.25, 0.75, 1], ease: 'easeInOut' }}
               className="relative z-50 text-center px-4 flex flex-col items-center"
             >
-              <img 
-                src="/image.png" 
-                alt="The Tiny Theatre" 
-                className="h-28 sm:h-36 w-auto object-contain mx-auto animate-pulse"
+              <img
+                src="/image.png"
+                alt="The Tiny Theatre"
+                className="h-40 sm:h-50 w-auto object-contain mx-auto animate-pulse"
               />
               <p className="text-theatre-gold mt-4 font-serif text-sm sm:text-base tracking-[0.25em] uppercase font-bold">
                 Opening Curtains...
@@ -128,7 +128,7 @@ function AppContent() {
 
       {/* Main Website Sections */}
       <Navbar />
-      
+
       <main className="flex-grow flex flex-col">
         <Routes>
           <Route path="/" element={
@@ -143,19 +143,19 @@ function AppContent() {
               <Testimonials />
             </>
           } />
-          
+
           <Route path="/features" element={
             <div className="pt-16 sm:pt-20">
               <Features preview={false} />
             </div>
           } />
-          
+
           <Route path="/screens" element={
             <div className="pt-24 sm:pt-32">
               <Screens preview={false} />
             </div>
           } />
-          
+
 
 
           <Route path="/offers" element={
@@ -207,13 +207,13 @@ function AppContent() {
           } />
 
           <Route path="/cancellation-policy" element={
-           <div className="pt-5 sm:pt-5">
+            <div className="pt-5 sm:pt-5">
               <CancellationPolicy />
             </div>
           } />
 
           <Route path="/house-rules" element={
-           <div className="pt-5 sm:pt-5">
+            <div className="pt-5 sm:pt-5">
               <HouseRules />
             </div>
           } />
@@ -233,9 +233,8 @@ function AppContent() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             onClick={scrollToTop}
-            className={`fixed bottom-40 sm:bottom-20 right-6 z-40 p-4 bg-theatre-gold hover:bg-theatre-gold-light text-theatre-grey-deep rounded-full shadow-lg shadow-theatre-gold/20 hover:scale-110 transition-all duration-300 border border-theatre-gold/10 cursor-pointer ${
-              location.pathname === '/book-now' ? 'hidden sm:block' : ''
-            }`}
+            className={`fixed bottom-40 sm:bottom-20 right-6 z-40 p-4 bg-theatre-gold hover:bg-theatre-gold-light text-theatre-grey-deep rounded-full shadow-lg shadow-theatre-gold/20 hover:scale-110 transition-all duration-300 border border-theatre-gold/10 cursor-pointer ${location.pathname === '/book-now' ? 'hidden sm:block' : ''
+              }`}
             aria-label="Scroll to top"
           >
             <ArrowUp className="w-5 h-5" />
